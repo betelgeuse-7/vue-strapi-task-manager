@@ -1,7 +1,6 @@
 <template>
     <div>
         <div v-for="task in tasks" v-bind:key="task.id">
-            <!-- Emit to "super" component (App) -->
             <Task @delete-task="deleteTask(task.id)" :task="task" />
         </div>
     </div>
@@ -20,6 +19,7 @@
         },
         methods: {
             deleteTask(id){
+            <!-- Emit to "super" component (App) -->
                 this.$emit('delete-task', id)
             }
         }
