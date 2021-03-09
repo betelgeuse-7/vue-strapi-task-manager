@@ -19,7 +19,7 @@
         },
         methods: {
             deleteTask(id){
-            <!-- Emit to "super" component (App) -->
+            // Emit to "super" component (App)
                 this.$emit('delete-task', id)
             }
         }
